@@ -18,7 +18,7 @@ app.get("/temp",(req,res)=>{
     const data=JSON.parse(fs.readFileSync("./db.json","utf-8"))
     console.log(data.cities[city])
     const temperature=data.cities[city]
-    res.send(`this is ${temperature} regarding ${city}`)
+    res.send(`this is ${temperature} regarding ${city} in celcius`)
 })
 app.listen(8080,()=>{
     console.log("port is running")
